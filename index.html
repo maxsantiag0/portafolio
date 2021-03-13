@@ -11,40 +11,61 @@
   <script src="https://kit.fontawesome.com/acee5a518d.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
   <!-- Template css Files -->
   <link rel="stylesheet" href="../Portafolio/css/style.css" type="text/css">
-  <link rel="stylesheet" href="../Portafolio/css/skins/pink.css" type="text/css">
+
+  <link rel="stylesheet" href="../Portafolio/css/skins/pink.css" class="alternate-style" title="pink" type="text/css">
+  <link rel="stylesheet" href="../Portafolio/css/skins/blue.css" class="alternate-style" title="blue" type="text/css"
+    disabled>
+  <link rel="stylesheet" href="../Portafolio/css/skins/orange.css" class="alternate-style" title="orange"
+    type="text/css" disabled>
+  <link rel="stylesheet" href="../Portafolio/css/skins/yellow.css" class="alternate-style" title="yellow"
+    type="text/css" disabled>
+  <link rel="stylesheet" href="../Portafolio/css/skins/green.css" class="alternate-style" title="green" type="text/css"
+    disabled>
+
+  <link rel="stylesheet" href="../Portafolio/css/styleSwitcher.css" type="text/css">
 </head>
 
 <body>
+  <!--preloader-->
+  <div class="preloader">
+    <div class="loader">
+
+    </div>
+  </div>
   <!--Main Container-->
   <div class="main-container">
     <div class="aside">
-      <div class="logo">
-        <a href="#">Upvesh</a>
-      </div>
       <div class="nav-toggler">
         <span></span>
       </div>
-      <ul class="list">
-        <li><a href="" class="active"> <i class="fa fa-home"></i> Home</a> </li>
-        <li><a href=""> <i class="fa fa-user"></i> About</a> </li>
-        <li><a href=""> <i class="fa fa-list"></i> Services</a> </li>
-        <li><a href=""> <i class="fa fa-briefcase"></i> Portafolio</a> </li>
-        <li><a href=""> <i class="fa fa-envelope"></i> Blog</a> </li>
-      </ul>
-      <div class="copyright-text">
-        &copy; 2021 The WebShala Tempalte
+      <div class="aside-inner">
+        <div class="logo">
+          <a href="#">MAXCODE</a>
+        </div>
+        
+        <ul class="list">
+          <li><a href="#home" class="active"> <i class="fa fa-home"></i>Inicio</a> </li>
+          <li><a href="#about"> <i class="fa fa-user"></i>Perfil</a> </li>
+          <li><a href="#services"> <i class="fa fa-list"></i> Servicios</a> </li>
+          <li><a href="#portafolio"> <i class="fa fa-briefcase"></i> Portafolio</a> </li>
+          <li><a href="#blog"> <i class="fa fa-envelope"></i> Blog</a> </li>
+          <li><a href="#contact"> <i class="fa fa-user"></i> Contacto</a> </li>
+        </ul>
+        <div class="copyright-text">
+          &copy; 2021 The WebShala Tempalte
+        </div>
       </div>
     </div>
     <div class="main-content">
-      <section class="home section ">
+      <section class="home section active" id="home">
         <div class="container">
           <div class="intro">
             <img src="../Portafolio/images/about.jpg" alt="profile" class="shadow-dark">
             <h1>Max Santiago</h1>
-            <p>Soy Desarrollador</p>
+            <p>Soy <span class="typing"></span> </p>
             <div class="red-social">
               <a href="">
                 <li class="fa fa-twitter"></li>
@@ -62,7 +83,7 @@
           </div>
         </div>
       </section>
-      <section class="about section ">
+      <section class="about section " id="about">
         <div class="container">
           <div class="row">
             <div class="section-title padd-15">
@@ -73,7 +94,7 @@
             <div class="about-content padd-15">
               <div class="row">
                 <div class="about-text padd-15">
-                  <h3>I'm upvesh Kumar and <span>web Develop</span></h3>
+                  <h3>I'm upvesh Kumar and <span class="typing2"></span></h3>
                   <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam voluptatum
                     repellendus debitis hic ea cumque quo quis dolore vel corporis provident accusantium
                     quod, amet nostrum excepturi tempore sint deleniti assumenda.</p>
@@ -106,8 +127,8 @@
                   </div>
                   <div class="row">
                     <div class="buttons padd-15">
-                      <a href="" class="btn">Descargar</a>
-                      <a href="" class="btn">Hire me</a>
+                      <a href="#" class="btn">Descargar</a>
+                      <a href="#contact" data-section-index="1" class="btn hire-me">Hire me</a>
                     </div>
                   </div>
                 </div>
@@ -130,12 +151,7 @@
                     <div class="skill-item padd-15">
                       <h5>Java</h5>
                       <div class="progreso">
-                        <div class="container">
-                          <div class="progress">
-                            <div class="progress-in progress-bar progress-bar-striped active" role="progressbar"
-                              aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"></div>
-                          </div>
-                        </div>
+                        <div class="progress-in " style="width: 80%;"></div>
                         <div class="skill-porcent ">80%</div>
                       </div>
                     </div>
@@ -271,76 +287,309 @@
         </div>
       </section>
       <!--Servicio-->
-      <section class="service section">
+      <section class="service section " id="services">
         <div class="container">
           <div class="row">
             <div class="section-title padd-15">
               <h2>Servicios</h2>
             </div>
-            <div class="row">
-              <div class="service-item padd-15">
-                <div class="service-item-inner">
-                  <div class="icon"><i class="fa fa-laptop"></i></div>
+          </div>
+          <div class="row">
+            <div class="service-item padd-15">
+              <div class="service-item-inner">
+                <div class="icon"><i class="fa fa-laptop"></i></div>
+                <h4>Web Desing</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
+                  assumenda quis perferendis itaque, illum ducimus. Iusto accusamus
+                  est rerum possimus! Voluptatibus maiores blanditiis vel nam quas
+                  facere tenetur maxime possimus.</p>
+              </div>
+            </div>
+            <div class="service-item padd-15">
+              <div class="service-item-inner">
+                <div class="icon"><i class="fa fa-laptop"></i></div>
+                <h4>Web Desing</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+              </div>
+            </div>
+            <div class="service-item padd-15">
+              <div class="service-item-inner">
+                <div class="icon"><i class="fa fa-photo"></i></div>
+                <h4>Web Desing</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
+                  assumenda quis perferendis itaque, illum ducimus. Iusto accusamus
+                  est rerum possimus! Voluptatibus maiores blanditiis vel nam quas
+                  facere tenetur maxime possimus.</p>
+              </div>
+            </div>
+            <div class="service-item padd-15">
+              <div class="service-item-inner">
+                <div class="icon"><i class="fa fa-code"></i></div>
+                <h4>Web Desing</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
+                  assumenda quis perferendis itaque, illum ducimus. Iusto accusamus
+                  est rerum possimus! Voluptatibus maiores blanditiis vel nam quas
+                  facere tenetur maxime possimus.</p>
+              </div>
+            </div>
+            <div class="service-item padd-15">
+              <div class="service-item-inner">
+                <div class="icon"><i class="fa fa-film"></i></div>
+                <h4>Web Desing</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
+                  assumenda quis perferendis itaque, illum ducimus. Iusto accusamus
+                  est rerum possimus! Voluptatibus maiores blanditiis vel nam quas
+                  facere tenetur maxime possimus.</p>
+              </div>
+            </div>
+            <div class="service-item padd-15">
+              <div class="service-item-inner">
+                <div class="icon"><i class="fa fa-rocket"></i></div>
+                <h4>Web Desing</h4>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
+                  assumenda quis perferendis itaque, illum ducimus. Iusto accusamus
+                  est rerum possimus! Voluptatibus maiores blanditiis vel nam quas
+                  facere tenetur maxime possimus.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!--Portafolio-->
+      <section class="portafolios section " id="portafolio">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>Portafoldio</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="portafolios-filter padd-15">
+              <button type="button" class="activar" data-filter="all">All</button>
+              <button type="button" data-filter="web-desing">Web Desing</button>
+              <button type="button" data-filter="photography">Photo</button>
+              <button type="button" data-filter="wordpress">Wordpress</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="portafolios-item padd-15" data-category="web-desing">
+              <div class="portafolios-item-inner shadow-dark">
+                <div class="portafolios-img">
+                  <img src="images/portfolio/1.jpg" alt="Potafolio">
+                </div>
+                <div class="portafolios-info">
                   <h4>Web Desing</h4>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
-                    assumenda quis perferendis itaque, illum ducimus. Iusto accusamus
-                    est rerum possimus! Voluptatibus maiores blanditiis vel nam quas
-                    facere tenetur maxime possimus.</p>
+                  <div class="icon">
+                    <i class="fa fa-search"></i>
+                  </div>
                 </div>
               </div>
-              <div class="service-item padd-15">
-                <div class="service-item-inner">
-                  <div class="icon"><i class="fa fa-laptop"></i></div>
-                  <h4>Web Desing</h4>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+            </div>
+            <div class="portafolios-item padd-15" data-category="photography">
+              <div class="portafolios-item-inner shadow-dark">
+                <div class="portafolios-img">
+                  <img src="images/portfolio/2.jpg" alt="photography">
                 </div>
-              </div>
-              <div class="service-item padd-15">
-                <div class="service-item-inner">
-                  <div class="icon"><i class="fa fa-photo"></i></div>
-                  <h4>Web Desing</h4>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
-                    assumenda quis perferendis itaque, illum ducimus. Iusto accusamus
-                    est rerum possimus! Voluptatibus maiores blanditiis vel nam quas
-                    facere tenetur maxime possimus.</p>
-                </div>
-              </div>
-              <div class="service-item padd-15">
-                <div class="service-item-inner">
-                  <div class="icon"><i class="fa fa-code"></i></div>
-                  <h4>Web Desing</h4>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
-                    assumenda quis perferendis itaque, illum ducimus. Iusto accusamus
-                    est rerum possimus! Voluptatibus maiores blanditiis vel nam quas
-                    facere tenetur maxime possimus.</p>
-                </div>
-              </div>
-              <div class="service-item padd-15">
-                <div class="service-item-inner">
-                  <div class="icon"><i class="fa fa-film"></i></div>
-                  <h4>Web Desing</h4>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
-                    assumenda quis perferendis itaque, illum ducimus. Iusto accusamus
-                    est rerum possimus! Voluptatibus maiores blanditiis vel nam quas
-                    facere tenetur maxime possimus.</p>
-                </div>
-              </div>
-              <div class="service-item padd-15">
-                <div class="service-item-inner">
-                  <div class="icon"><i class="fa fa-rocket"></i></div>
-                  <h4>Web Desing</h4>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit
-                    assumenda quis perferendis itaque, illum ducimus. Iusto accusamus
-                    est rerum possimus! Voluptatibus maiores blanditiis vel nam quas
-                    facere tenetur maxime possimus.</p>
+                <div class="portafolios-info">
+                  <h4>Photo</h4>
+                  <div class="icon">
+                    <i class="fa fa-search"></i>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      <!--Portafolio-->
+      <section class="blog section" id="blog">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>Latest Blog</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="blog-item padd-15">
+              <div class="blog-item-inner shadow-dark">
+                <div class="blog-img">
+                  <img src="../Portafolio/images/blog/1.jpg" alt="blog">
+                  <div class="blog-date">
+                    4 Junio 2021
+                  </div>
+                </div>
+                <div class="blog-info">
+                  <h4 class="blog-title">Responsive web Desing</h4>
+                  <p class="blog-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Architecto quaerat sed eligendi laborum magni tenetur, incidunt dicta explicabo nostrum
+                    doloremque, ipsa neque officia enim nam ipsum corporis, dolorum optio assumenda.</p>
+                  <p class="blog-tags">tabgs: <a href="#">html</a> , <a href="#">css</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="blog-item padd-15">
+              <div class="blog-item-inner shadow-dark">
+                <div class="blog-img">
+                  <img src="../Portafolio/images/blog/2.jpg" alt="blog">
+                  <div class="blog-date">
+                    4 Junio 2021
+                  </div>
+                </div>
+                <div class="blog-info">
+                  <h4 class="blog-title">Responsive web Desing</h4>
+                  <p class="blog-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Architecto quaerat sed eligendi laborum magni tenetur, incidunt dicta explicabo nostrum
+                    doloremque, ipsa neque officia enim nam ipsum corporis, dolorum optio assumenda.</p>
+                  <p class="blog-tags">tabgs: <a href="#">html</a> , <a href="#">css</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="blog-item padd-15">
+              <div class="blog-item-inner shadow-dark">
+                <div class="blog-img">
+                  <img src="../Portafolio/images/blog/3.jpg" alt="blog">
+                  <div class="blog-date">
+                    4 Junio 2021
+                  </div>
+                </div>
+                <div class="blog-info">
+                  <h4 class="blog-title">Responsive web Desing</h4>
+                  <p class="blog-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Architecto quaerat sed eligendi laborum magni tenetur, incidunt dicta explicabo nostrum
+                    doloremque, ipsa neque officia enim nam ipsum corporis, dolorum optio assumenda.</p>
+                  <p class="blog-tags">tags: <a href="#">html</a> , <a href="#">css</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--Contact-->
+      <section class="contact section" id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="section-title padd-15">
+              <h2>Contact Me</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="contact-info-item padd-15">
+              <div class="icon">
+                <li class="fa fa-phone"></li>
+              </div>
+              <h4>Call Us on</h4>
+              <p>999276900</p>
+
+            </div>
+            <div class="contact-info-item padd-15">
+              <div class="icon">
+                <li class="fa fa-map-marker"></li>
+              </div>
+              <h4>Office</h4>
+              <p>999276900</p>
+
+            </div>
+            <div class="contact-info-item padd-15">
+              <div class="icon">
+                <li class="fa fa-envelope"></li>
+              </div>
+              <h4>Email</h4>
+              <p>a@hotmail.com</p>
+            </div>
+
+          </div>
+          <div class="row">
+            <form action="" class="contact-form padd-15">
+              <div class="row">
+                <div class="form-item col-6 padd-15">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="name">
+                  </div>
+                </div>
+                <div class="form-item col-6 padd-15">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Email">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-item col-12 padd-15">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Subject">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-item col-12 padd-15">
+                  <div class="form-group">
+                    <textarea class="form-control" placeholder="Message"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 padd-15">
+                  <button type="submit" class="btn">Enviar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+
+        </div>
+      </section>
     </div>
   </div>
+  <div class="lightbox">
+    <div class="light-content">
+      <div class="lightbox-close">&times; </div>
+      <img src="../Portafolio/images/portfolio/2.jpg" class="light-img" onclick="nextItem()">
+      <div class="lightbox-caption">
+        <div class="caption-text">Web Desing</div>
+        <div class="caption-counter">1 of 6</div>
+      </div>
+    </div>
+    <div class="light-controls">
+      <div class="prev-item" onclick="prevItem()"> <i class="fa fa-angle-left"></i></div>
+      <div class="next-item" onclick="nextItem()"><i class="fa fa-angle-right"></i></div>
+    </div>
+  </div>
+  <div class="style-switcher">
+    <div class="toggle-style-switcher">
+      <i class="fa fa-cog fa-spin"></i>
+    </div>
+    <h5>Style</h5>
+    <ul>
+      <li><a href="javascript:void(0);" title="pink" style="background-color: #ec1839;"
+          onclick="setActiveStyle('pink')"></a></li>
+      <li><a href="javascript:void(0);" title="blue" style="background-color: #2196f3;"
+          onclick="setActiveStyle('blue')"></a></li>
+      <li><a href="javascript:void(0);" title="orange" style="background-color: #fa5b0f;"
+          onclick="setActiveStyle('orange')"></a></li>
+      <li><a href="javascript:void(0);" title="yellow" style="background-color: #ffb400;"
+          onclick="setActiveStyle('yellow')"></a></li>
+      <li><a href="javascript:void(0);" title="green" style="background-color: #72b626;"
+          onclick="setActiveStyle('green')"></a></li>
+
+    </ul>
+    <h5>Body Skin</h5>
+    <label>
+      <input type="radio" class="body-skin" name="body-style" value="light" checked="true">
+      Light
+    </label>
+    <label>
+      <input type="radio" class="body-skin" name="body-style" value="dark">
+    </label>
+    Drak
+  </div>
+
+
+  <script src="../Portafolio/js/script.js"></script>
+  <script src="../Portafolio/js/styleSwitcher.js"></script>
 </body>
 
 </html>
