@@ -6,6 +6,8 @@ window.addEventListener("load",function(){
    }, 1000);
 })
 
+//Portafio
+/*
 const filtercontainer = document.querySelector(".portafolios-filter"),
     filterBtn = filtercontainer.children,
     totalFilterBtn = filterBtn.length,
@@ -83,18 +85,18 @@ lightbox.addEventListener("click", function (event) {
         toggleLightbox();
     }
 
-})
+})*/
 
 //typing Animation
 var typed = new Typed(".typing", {
-    strings: ["Desarrollador Web", "Desarrollador Desktop", "Electrónico Industrial", "Dibujante"],
+    strings: ["Desarrollador de Software", "Electrónico Industrial","Docente de Robótica" ,"Dibujante"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
 });
 
 var typed = new Typed(".typing2", {
-    strings: ["Desarrollador Web", "Desarrollador Desktop", "Electrónico Industrial", "Dibujante"],
+    strings: ["Desarrollador de Software", "Electrónico Industrial","Docente de Robótica" ,"Dibujante"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
@@ -185,3 +187,21 @@ for (let i = 0; i < totalSection; i++) {
 
 }
 }
+
+/*
+let options = {
+  startAngle: -1.55,
+  size: 100,
+  value: 0.85,
+  fill: {gradient: ['#a445b2', '#fa4299']}
+}
+$(".circle .bar").circleProgress(options).on('circle-animation-progress',
+function(event, progress, stepValue){
+  $(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)) + "%");
+});
+$(".js .bar").circleProgress({
+  value: 0.70
+});
+$(".react .bar").circleProgress({
+  value: 0.60
+});*/
