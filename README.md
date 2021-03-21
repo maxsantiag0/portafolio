@@ -1,4 +1,5 @@
 # portafolio
 portafolio web
-![portafolio_home](https://user-images.githubusercontent.com/81062357/111912057-f304a600-8a35-11eb-9ceb-585c03a5ee82.PNG)
+![portafolio_home](https://user-images.githubusercontent.com/81062357/111912098-25ae9e80-8a36-11eb-8dcd-186a1ad4e743.PNG)
+
 
